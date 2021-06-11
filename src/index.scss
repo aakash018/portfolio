@@ -1,0 +1,20 @@
+@import "./scss/abstract/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Raleway";
+}
+
+html {
+  font-size: 60.5%;
+  overflow: hidden;
+}
+
+body{
+  background-color: $background-color;
+  color: white;
+  height: 100vh;
+}

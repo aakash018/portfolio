@@ -1,0 +1,23 @@
+header {
+    color: $theme-color;
+    height: 55px;
+
+    @include flex(flex-end);
+
+    nav {
+        ul {
+            @include flex(space-between, flex-end);
+    
+            width: 380px;
+            font-weight: bold;
+
+            margin-right: 200px;
+
+            li {
+                list-style: none;
+            }
+        }
+
+        display: none;
+    }
+}

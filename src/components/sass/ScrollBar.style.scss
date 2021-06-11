@@ -1,0 +1,96 @@
+$animation-bar-time: 1s;
+
+
+.sudo_scrollBar{
+   position: absolute;
+   left: 30px;
+   bottom: 0;
+
+   @include flex;
+    flex-direction: column;
+
+   &__bottom_bar{
+       width: 1px;
+       height: 43vh;
+
+       background-image: linear-gradient(to bottom, $theme-color, rgba(0, 0, 0, 0));
+
+       transform: scale(90%);
+       transform-origin: bottom;
+
+       animation: bar_bottom_init $animation-bar-time ease-in-out 0s normal forwards;
+   }
+
+   &__circle{
+        width: 15px;
+        height: 15px;
+
+        border-radius: 50%;
+        opacity: 0;
+        transform-origin: center;
+        transform: scale(0);
+
+        animation: bar_circle_init 1s ease-in $animation-bar-time normal forwards;
+
+        position: relative;
+
+       &::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           z-index: 2;
+           border: 1px solid $theme-color;
+
+           transform-origin: center;
+           transform: scale(0);
+           border-radius: 50%;
+
+           opacity: 1;
+           animation: bar_circle_wave 2s ease-out 2s normal forwards;
+       }
+    
+   }
+}
+
+@keyframes bar_bottom_init {
+    to {
+        transform: scale(100%);
+    }
+}
+
+@keyframes bar_circle_init {
+    50% {
+        opacity: 1;
+        border: 2px solid $theme-color;
+        background-color: transparent;
+        transform: scale(150%);
+
+    }
+
+    85%{
+        opacity: 1;
+        border: 2px solid $theme-color;
+        background-color: transparent;
+        transform: scale(100%);
+
+    }
+
+
+    100% {
+        background-color: $theme-color;
+        opacity: 1;
+        transform: scale(100%);
+
+    }
+}
+
+@keyframes bar_circle_wave {
+
+    100%{
+        opacity: 0;
+        transform: scale(450%);
+    }
+}

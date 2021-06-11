@@ -1,0 +1,14 @@
+@mixin flex($justify-type: center, $align-type: center)
+ {
+    display: flex;
+    justify-content: $justify-type;
+    align-items: $align-type;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

@@ -1,0 +1,15 @@
+@import "./abstract/variables";
+@import "./abstract/mixins";
+
+
+
+@import "../components/sass/Header.style.scss";
+@import "../scss/home.style.scss";
+@import "../components/sass/ScrollBar.style.scss";
+@import "../components/sass/Hamburger.style.scss";
+@import "../components/sass/Heading.style.scss";
+
+
+.highlight {
+    color: $theme-color;
+}
