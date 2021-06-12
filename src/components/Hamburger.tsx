@@ -1,9 +1,15 @@
 import React from 'react'
 
-export const Hamburger = () => {
-    return (
-        <div className="hamburgerMenu" >
+interface Props {
+    onClick: () => any
+}
 
+export const Hamburger: React.FC<Props> = ({ onClick }) => {
+    return (
+        <div onClick={onClick} className="hamburger_container">
+            <div className="hamburgerMenu" >
+
+            </div>
         </div>
     )
 }

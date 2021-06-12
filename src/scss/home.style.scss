@@ -3,16 +3,20 @@
     width: 100vw;
     height: 100vh;
 
-    overflow: hidden;
 &__container{
     width: 100vw;
-    height: 70vh;
-    @include flex(space-between);
+    // min-height: 70vh;    
+    height: 100vh;
+    // @include flex(space-between);
     flex-direction: column;
+
 }
 
 &__sitting_avater {
-   
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
     img{
     width: 200px;
     object-fit: cover;
@@ -31,6 +35,13 @@
 
     align-self: flex-start;
     margin-left: 60px;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    // flex-grow: 1;
+
+    @include flex(center, flex-start);
+    flex-direction: column;
     
     .subtitle {
         font-size: 3rem;
@@ -45,6 +56,12 @@
             display: block;
         }
     }
+}
+
+
+&__course {
+    opacity: 0;
+    visibility: inherit;
 }
 
 }

@@ -10,11 +10,16 @@
 
 html {
   font-size: 60.5%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body{
   background-color: $background-color;
   color: white;
   height: 100vh;
+}
+
+button {
+  outline: none;
+  border: none;
 }

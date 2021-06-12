@@ -1,8 +1,12 @@
 import React from "react"
 
-const Heading: React.FC = ({ children }) => {
+interface Props {
+    small?: boolean
+}
+
+const Heading: React.FC<Props> = ({ children, small }) => {
     return (
-        <span className="title" >
+        <span className="title" style={small ? { fontSize: "3rem" } : {}}>
             {children}
         </span>
     )

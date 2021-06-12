@@ -2,22 +2,51 @@ header {
     color: $theme-color;
     height: 55px;
 
-    @include flex(flex-end);
+    // @include flex(flex-end);
 
-    nav {
-        ul {
-            @include flex(space-between, flex-end);
+    position: fixed;
+
     
-            width: 380px;
+    nav {
+        width: 100vw;
+        height: 100vh;
+        
+        background: $theme-color;
+        position: relative;
+
+        z-index: 50;
+
+        clip-path: circle(10% at 120% -20%);
+        transition: clip-path 1s ease-in-out;
+
+        
+
+        ul {
+            @include flex(space-evenly);
+            flex-direction: column;
+            
             font-weight: bold;
-
-            margin-right: 200px;
-
+            font-size: 8rem;
+            
+            height: 100%;
+            
+            color: $background-color;
             li {
                 list-style: none;
             }
         }
-
-        display: none;
     }
+
+    .nav_active{
+        clip-path: circle(100%);
+
+    }
+
+    .header_ham{
+        position: absolute;
+        right: 0;
+        top: 20px;
+
+        z-index: 200;
+    } 
 }

@@ -2,7 +2,7 @@ $animation-bar-time: 1s;
 
 
 .sudo_scrollBar{
-   position: absolute;
+   position: fixed;
    left: 30px;
    bottom: 0;
 
@@ -11,7 +11,7 @@ $animation-bar-time: 1s;
 
    &__bottom_bar{
        width: 1px;
-       height: 43vh;
+       height: 50vh;
 
        background-image: linear-gradient(to bottom, $theme-color, rgba(0, 0, 0, 0));
 
