@@ -23,3 +23,24 @@ button {
   outline: none;
   border: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $theme-color;
+  border-radius: 500px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lighten($color: $theme-color, $amount: 25);
+}

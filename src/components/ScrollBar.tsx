@@ -1,6 +1,30 @@
-import React from 'react'
-
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useEffect } from 'react';
 const ScrollBar = () => {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+    }, [])
+
+    useEffect(() => {
+        gsap.to(".sudo_scrollBar__top_bar", {
+            scrollTrigger: {
+                trigger: "#home__subtitle",
+                start: "30% 40%",
+                end: "center 35%",
+                scrub: 2,
+                // markers: true,
+            },
+            transformOrigin: "bottom",
+            scale: 1,
+            opacity: 1
+            // rotateX: "180deg",
+            // transformStyle: "preserve-3d",
+
+        });
+    }, [])
+
     return (
         <div className="sudo_scrollBar">
             <div className="sudo_scrollBar__top_bar"></div>

@@ -30,7 +30,6 @@
     animation: title_init 1s ease-in 3s normal forwards;
 }
 
-
 &__text_info{
 
     align-self: flex-start;
@@ -38,6 +37,14 @@
     height: 100vh;
     position: relative;
     z-index: -1;
+
+    // background-color: black;
+    // @include flex(space-between, space-between);
+    // flex-direction: column;
+
+    position: absolute;
+    top: 150px;
+
     // flex-grow: 1;
 
     @include flex(center, flex-start);
@@ -51,6 +58,8 @@
         transform: translateX(-20px);
         animation: subtitle_init 1s ease-in 3.5s normal forwards;
 
+        // background-color: khaki;
+
 
         span {  
             display: block;
@@ -58,10 +67,20 @@
     }
 }
 
-
 &__course {
     opacity: 0;
-    visibility: inherit;
+    transform: rotateX(180deg); 
+}
+
+&__work{
+
+    margin-top: 40px;
+
+    p{  
+
+        font-size: 1.8rem;
+        line-height: 23px;
+    }
 }
 
 }

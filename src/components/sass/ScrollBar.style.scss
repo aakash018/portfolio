@@ -1,6 +1,7 @@
 $animation-bar-time: 1s;
 
 
+
 .sudo_scrollBar{
    position: fixed;
    left: 30px;
@@ -19,6 +20,16 @@ $animation-bar-time: 1s;
        transform-origin: bottom;
 
        animation: bar_bottom_init $animation-bar-time ease-in-out 0s normal forwards;
+   }
+
+   &__top_bar{
+        width: 1px;
+        height: 50vh;
+        transform: scale(0);
+        transform-origin: bottom;
+        background-image: linear-gradient(to top, $theme-color, rgba(0, 0, 0, 0));
+
+        opacity: 0;
    }
 
    &__circle{
