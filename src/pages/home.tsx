@@ -102,7 +102,7 @@ const Home = () => {
                         <span className="title_text home__course__text" >Course of <span className="highlight">life.</span></span>
                     </div>
 
-                    {/* <div className="home__text_block home__work">
+                    <div className="home__text_block home__work">
                         <div className="title_text" >
                             Wo<span className="highlight" >rk</span>
                         </div>
@@ -113,7 +113,7 @@ const Home = () => {
                             Also have couple of production and some
                             for fun projects under my belt.
                         </p>
-                    </div> */}
+                    </div>
 
 
                 </div>
