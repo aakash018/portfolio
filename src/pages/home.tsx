@@ -10,6 +10,9 @@ const Home = () => {
     const introText = useRef<HTMLDivElement>(null)
     const introText_subtitle = useRef<HTMLDivElement>(null)
     const course = useRef<HTMLDivElement>(null)
+    const work = useRef<HTMLDivElement>(null)
+    const current = useRef<HTMLDivElement>(null)
+    const early = useRef<HTMLDivElement>(null)
 
     // * INIT
     useEffect(() => {
@@ -62,18 +65,96 @@ const Home = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: course.current as any,
-                start: "top 60%",
-                end: "center 50%",
-                scrub: 0.5,
+                start: "top 55%",
+                end: "+=200 55%",
+                scrub: 1,
+                // markers: true
             },
         });
         tl.add("intro").to(course.current, {
+            stagger: 3,
             opacity: 1,
             rotateX: "0",
         })
-            .add("exist")
-            .to(course.current, {
-                opacity: 0
+            .add("intro").to(course.current, {
+                stagger: 3,
+                opacity: 1,
+                rotateX: "0",
+            })
+            .add("exist").to(course.current, {
+                opacity: 0,
+                rotateZ: "30deg"
+            })
+    }, [])
+
+    // * Work 
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: work.current as any,
+                start: "top 55%",
+                end: "bottom 55%",
+                scrub: 0.5,
+            },
+        });
+        tl.add("intro").to(work.current, {
+            opacity: 1,
+            // rotateX: "0",
+        })
+            .add("intro").to(work.current, {
+                opacity: 1,
+                // rotateX: "0",
+            })
+            .add("exist").to(work.current, {
+                opacity: 0,
+                rotateZ: "30deg"
+            })
+    }, [])
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: current.current as any,
+                start: "top 55%",
+                end: "bottom 55%",
+                scrub: 0.5,
+            },
+        });
+        tl.add("intro").to(current.current, {
+            opacity: 1,
+            // rotateX: "0",
+        })
+            .add("intro").to(current.current, {
+                opacity: 1,
+                // rotateX: "0",
+            })
+            .add("exist").to(current.current, {
+                opacity: 0,
+                rotateZ: "30deg"
+            })
+    }, [])
+
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: early.current as any,
+                start: "top 55%",
+                end: "bottom 55%",
+                scrub: 0.5,
+            },
+        });
+        tl.add("intro").to(early.current, {
+            opacity: 1,
+            // rotateX: "0",
+        })
+            .add("intro").to(early.current, {
+                opacity: 1,
+                // rotateX: "0",
+            })
+            .add("exist").to(early.current, {
+                opacity: 0,
+                rotateZ: "30deg"
             })
     }, [])
 
@@ -102,7 +183,7 @@ const Home = () => {
                         <span className="title_text home__course__text" >Course of <span className="highlight">life.</span></span>
                     </div>
 
-                    <div className="home__text_block home__work">
+                    <div className="home__text_block home__work" ref={work}>
                         <div className="title_text" >
                             Wo<span className="highlight" >rk</span>
                         </div>
@@ -112,6 +193,24 @@ const Home = () => {
                             forward learning any new technologies.
                             Also have couple of production and some
                             for fun projects under my belt.
+                        </p>
+                    </div>
+
+
+                    <div className="home__text_block home__work" ref={current}>
+                        <div className="title_text">Currently</div>
+                        <p>
+                            doing my <span className="highlight"><b>Bachelor in Computer Engineering </b></span>
+                            from <span className="highlight"><b>Advanced College of Engineering and Management</b></span>
+                        </p>
+                    </div>
+
+                    <div className="home__text_block home__early" ref={early}>
+                        <div className="title_text">Early<span className="highlight">Days</span></div>
+                        <p>
+                            It all startes when I  was , you can say, forced
+                            to  pick Qbasic in grade 6. I was lucky enough
+                            to fall in love with it really fast.
                         </p>
                     </div>
 

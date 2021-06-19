@@ -3,6 +3,10 @@
     width: 100vw;
     height: 100vh;
 
+    // overflow: scroll;
+    // position: fixed;
+
+
 &__container{
     width: 100vw;
     // min-height: 70vh;    
@@ -68,16 +72,15 @@
 }
 
 &__work{
+    opacity: 0;
 
-    margin-top: 20px;
-
-    p{  
-
-        font-size: 1.8rem;
-        line-height: 23px;
-    }
 }
 
+p{   
+    
+    font-size: 1.8rem;
+    line-height: 23px;
+}
 }
 
 @keyframes title_init {
