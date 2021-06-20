@@ -13,6 +13,7 @@ const Home = () => {
     const work = useRef<HTMLDivElement>(null)
     const current = useRef<HTMLDivElement>(null)
     const early = useRef<HTMLDivElement>(null)
+    const early_dis = useRef<HTMLDivElement>(null)
 
     // * INIT
     useEffect(() => {
@@ -98,19 +99,22 @@ const Home = () => {
             },
         });
         tl.add("intro").to(work.current, {
+            stagger: 3,
             opacity: 1,
-            // rotateX: "0",
+            rotateX: "0",
         })
             .add("intro").to(work.current, {
+                stagger: 3,
                 opacity: 1,
-                // rotateX: "0",
+                rotateX: "0",
             })
             .add("exist").to(work.current, {
                 opacity: 0,
-                rotateZ: "30deg"
+                // rotateZ: "30deg"
             })
     }, [])
 
+    // * CURRENT
     useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -121,42 +125,74 @@ const Home = () => {
             },
         });
         tl.add("intro").to(current.current, {
+            stagger: 3,
             opacity: 1,
-            // rotateX: "0",
+            rotateX: "0",
         })
             .add("intro").to(current.current, {
+                stagger: 3,
                 opacity: 1,
-                // rotateX: "0",
+                rotateX: "0",
             })
             .add("exist").to(current.current, {
                 opacity: 0,
-                rotateZ: "30deg"
+                // rotateZ: "30deg"
             })
     }, [])
 
 
+    // * Early 
     useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: early.current as any,
                 start: "top 55%",
-                end: "bottom 55%",
-                scrub: 0.5,
+                end: "+=200 55%",
+                scrub: 1,
             },
         });
         tl.add("intro").to(early.current, {
+            stagger: 3,
             opacity: 1,
-            // rotateX: "0",
+            rotateX: "0",
         })
             .add("intro").to(early.current, {
+                stagger: 3,
                 opacity: 1,
-                // rotateX: "0",
+                rotateX: "0",
             })
             .add("exist").to(early.current, {
                 opacity: 0,
                 rotateZ: "30deg"
             })
     }, [])
+
+    // * Early dis 
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: early_dis.current as any,
+                start: "top 55%",
+                end: "bottom 55%",
+                scrub: 0.5,
+            },
+        });
+        tl.add("intro").to(early_dis.current, {
+            stagger: 3,
+            opacity: 1,
+            rotateX: "0",
+        })
+            .add("intro").to(early_dis.current, {
+                stagger: 3,
+                opacity: 1,
+                rotateX: "0",
+            })
+            .add("exist").to(early_dis.current, {
+                opacity: 0,
+                // rotateZ: "30deg"
+            })
+    }, [])
+
 
     return (
         <div className="home">
@@ -205,18 +241,39 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="home__text_block home__early" ref={early}>
+                    <div className="home__text_block home__course" ref={early}>
                         <div className="title_text">Early<span className="highlight">Days</span></div>
-                        <p>
+                        {/* <p>
                             It all startes when I  was , you can say, forced
                             to  pick Qbasic in grade 6. I was lucky enough
                             to fall in love with it really fast.
-                        </p>
+                        </p> */}
                     </div>
 
 
+                    <div className="home__text_block home__early_dis home__work" ref={early_dis}>
+                        <p>
+                            Got to know about basic <span className="highlight">HTML</span>  through school curriculum and have been hooked with it ever since.
+                        </p>
+                        <p>
+                            Highschool was where I got to explore it more and lernet <span className="highlight"> HTML</span>
+                            and<span className="highlight"> CSS</span> with some basic
+                            <span className="highlight"> JS</span>.
+                        </p>
+                        <p>
+                            Also I made my first “real” web project during this period.
+                        </p>
+                    </div>
+
+                    <div className="home__text_block">
+
+                        {/* <ThankYou /> */}
+                    </div>
                 </div>
             </div>
+
+
+
         </div >
     )
 }
