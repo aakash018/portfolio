@@ -25,6 +25,23 @@ const ScrollBar = () => {
         });
     }, [])
 
+    useEffect(() => {
+        gsap.to(".sudo_scrollBar__bottom_bar", {
+            scrollTrigger: {
+                trigger: "#home__thankYou",
+                start: "top 70%",
+                end: "40% 65%",
+                scrub: 2,
+            },
+            transformOrigin: "top",
+            scale: 0,
+            opacity: 0
+            // rotateX: "180deg",
+            // transformStyle: "preserve-3d",
+
+        });
+    }, [])
+
     return (
         <div className="sudo_scrollBar">
             <div className="sudo_scrollBar__top_bar"></div>

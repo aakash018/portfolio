@@ -16,10 +16,11 @@ $animation-bar-time: 1s;
 
        background-image: linear-gradient(to bottom, $theme-color, rgba(0, 0, 0, 0));
 
-       transform: scale(90%);
+       transform: scale(1);
        transform-origin: bottom;
+       opacity: 1;
 
-       animation: bar_bottom_init $animation-bar-time ease-in-out 0s normal forwards;
+    //    animation: bar_bottom_init $animation-bar-time ease-in-out 0s normal forwards;
    }
 
    &__top_bar{

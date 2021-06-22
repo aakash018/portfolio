@@ -3,6 +3,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useEffect, useRef } from 'react';
 import avater from "../assets/avater/sitting.svg";
 import ScrollBar from '../components/ScrollBar';
+import ThankYou from "../components/ThankYou";
 
 
 const Home = () => {
@@ -198,7 +199,7 @@ const Home = () => {
         <div className="home">
             <ScrollBar />
             <div className="home__container" >
-                <div className="home__sitting_avater">
+                <div className="home__sitting_avater" id="home__avatar__sit">
                     <img src={avater} />
                 </div>
                 <div className="home__text_info" >
@@ -265,10 +266,8 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="home__text_block">
 
-                        {/* <ThankYou /> */}
-                    </div>
+                    <ThankYou />
                 </div>
             </div>
 
