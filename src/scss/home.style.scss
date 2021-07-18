@@ -7,8 +7,7 @@
     // overflow: scroll;
     // position: fixed;
 
-    
-
+  
 
 &__container{
     width: 100vw;
@@ -24,9 +23,22 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+
+    @media (min-width: $mobile-view){
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
+
     img{
     width: 200px;
     object-fit: cover;
+    @media (min-width: $mobile-view){
+        width: 300px;
+    }
+
+    
     }
 }
 &__title {
@@ -46,11 +58,17 @@
     z-index: -1;
     position: absolute;
     top: 350px;
-    // background-color: aquamarine;
 
     @include flex(flex-start, flex-start);
     gap: 200px;
     flex-direction: column;
+
+    @media (min-width: $mobile-view){
+        width: 50%;
+        right: 60px;
+        top: 250px;
+    }
+
     
     .subtitle {
         font-size: 3rem;

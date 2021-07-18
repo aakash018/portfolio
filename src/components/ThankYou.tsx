@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from 'react';
+import { FaGithub, FaInstagram } from "react-icons/fa"
 const ThankYou: React.FC = () => {
 
     const thanks = useRef<HTMLDivElement>(null)
@@ -26,9 +27,6 @@ const ThankYou: React.FC = () => {
             .add("intro").to(thanks.current, {
                 opacity: 1,
             })
-            .add("exist").to(thanks.current, {
-                opacity: 0
-            })
     }, [])
 
 
@@ -41,7 +39,20 @@ const ThankYou: React.FC = () => {
                     Thank you for checking my <span className="highlight">website</span>
                 </div>
                 <p style={{ marginTop: "40px" }}><>Check Works and About Me section for more</></p>
-                <p>aakashkhanal015@<span className="highlight">gmail.com</span></p>
+                
+                <p className="home__thanks_contact" >
+                    <a>
+                    aakashkhanal015@<span className="highlight">gmail.com</span>
+                    </a>
+                    <section className="home__thanks_contact_socials" >
+                        <a >
+                        <FaGithub />
+                        </a>
+                        <a >
+                        <FaInstagram />
+                        </a>
+                    </section>
+                </p>
             </div>
         </>
     )

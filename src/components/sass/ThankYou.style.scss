@@ -2,4 +2,30 @@
     padding-bottom: 280px;
     // background-color: aqua;
     opacity: 0;
+
+
+    @media (min-width: $mobile-view){
+        transform: translate(-85%, -20%);
+    }
+
+    &_contact{
+
+        width: 300px;
+
+        &_socials {
+            @include flex(space-between);
+            gap: 30px;
+            width: fit-content;
+            margin-top: 10px;
+            font-size: 4rem;
+
+        }
+    }
+}
+
+#home__thankYou{
+    @media (min-width: $mobile-view){
+        font-size: 6rem;
+    }
+
 }

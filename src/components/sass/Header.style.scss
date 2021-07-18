@@ -6,6 +6,10 @@ header {
 
     position: fixed;
 
+    @media (min-width: $mobile-view) {
+        @include flex(flex-end);
+        width: 100vw;
+    }
     
     nav {
         width: 100vw;
@@ -19,7 +23,14 @@ header {
         clip-path: circle(10% at 120% -20%);
         transition: clip-path 1s ease-in-out;
 
-        
+        @media (min-width: $mobile-view) {
+            width: 45%;
+            height: 100%;
+            background-color: $background-color;
+            clip-path: none;
+
+            margin-right: 40px;
+        }
 
         ul {
             @include flex(space-evenly);
@@ -33,6 +44,12 @@ header {
             color: $background-color;
             li {
                 list-style: none;
+            }
+
+            @media (min-width: $mobile-view) {
+                flex-direction: row;
+                color: $theme-color;
+                font-size: 2.2rem;
             }
         }
     }
@@ -48,5 +65,9 @@ header {
         top: 20px;
 
         z-index: 200;
+
+        @media (min-width: $mobile-view) {
+            display: none;
+        }
     } 
 }

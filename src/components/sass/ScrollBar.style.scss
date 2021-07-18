@@ -6,9 +6,14 @@ $animation-bar-time: 1s;
    position: fixed;
    left: 30px;
    bottom: 0;
+   @media (min-width: $mobile-view) {
+       right: 70px;
+       left: auto;
+   }
 
    @include flex;
     flex-direction: column;
+
 
    &__bottom_bar{
        width: 1px;
