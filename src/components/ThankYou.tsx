@@ -45,14 +45,30 @@ const ThankYou: React.FC = () => {
                     aakashkhanal015@<span className="highlight">gmail.com</span>
                     </a>
                     <section className="home__thanks_contact_socials" >
-                        <a >
+                        <a href="https://github.com/aakash018" target="_blank">
                         <FaGithub />
                         </a>
-                        <a >
+                        <a href="https://www.instagram.com/sw17t" target="_blank">
                         <FaInstagram />
                         </a>
                     </section>
                 </p>
+                <div className="home__thanks_madeWith" >
+                    <h2>/*  </h2>
+                        <h2>Made with</h2>
+                    <ul>
+                        <div>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Vite</li>
+                        </div>
+                        <div>
+                        <li>Scss</li>
+                        <li>Gsap</li>
+                        </div>
+                    </ul>
+                    <h2>*/</h2>
+                </div>
             </div>
         </>
     )

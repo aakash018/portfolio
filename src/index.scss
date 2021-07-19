@@ -28,9 +28,9 @@ p{
   margin-bottom: 10px;
 }
 
-a {
+a, a:hover, a:focus, a:active {
   text-decoration: none;
-  color: white;  
+  color: inherit;
 }
 
 /* width */

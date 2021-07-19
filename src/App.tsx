@@ -1,5 +1,5 @@
 import React from 'react'
-// import avater from "./assets/avater/unknown.png"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Header from './components/Header'
 import Home from './pages/home'
 import './scss/App.scss'
@@ -10,7 +10,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} exact/>
+        </Switch>
+      </Router>
     </div>
   )
 }

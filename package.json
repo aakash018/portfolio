@@ -7,10 +7,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.1.8",
     "gsap": "^3.6.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",

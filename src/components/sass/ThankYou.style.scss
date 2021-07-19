@@ -1,8 +1,6 @@
 .home__thanks{
-    padding-bottom: 280px;
-    // background-color: aqua;
+    padding-bottom: 30px;
     opacity: 0;
-
 
     @media (min-width: $mobile-view){
         transform: translate(-85%, -20%);
@@ -11,14 +9,28 @@
     &_contact{
 
         width: 300px;
-
-        &_socials {
+        margin-top: 20px;
+        &_socials {            
             @include flex(space-between);
             gap: 30px;
             width: fit-content;
             margin-top: 10px;
             font-size: 4rem;
 
+        }
+    }
+
+    &_madeWith{
+        margin-top: 40px;
+        color: $submerge-color;
+        font-size: 1.7rem;
+        ul {
+            list-style: none;
+            font-size: 1.5rem;
+            line-height: 20px;
+            font-weight: bold;
+            display: flex;
+            gap: 40px;
         }
     }
 }

@@ -66,7 +66,7 @@
     @media (min-width: $mobile-view){
         width: 50%;
         right: 60px;
-        top: 250px;
+        top: 290px;
     }
 
     
@@ -85,6 +85,10 @@
             display: block;
         }
     }
+}
+
+&__text_block {
+    width: 90%;
 }
 
 &__course {
