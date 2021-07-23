@@ -1,0 +1,25 @@
+.home__pic_block {
+    width: 100%;
+    height: 100%;
+    @include flex(flex-end, flex-start);
+    &_img {
+        animation: sun_rotate 1s linear none infinite alternate;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+       object-fit: contain;
+
+    }
+}
+
+@keyframes sun_rotate {
+    $rotate: 10deg;
+    0% {
+        transform: rotate($rotate);
+    }
+    100% {
+        transform: rotate(-$rotate);
+    }
+}

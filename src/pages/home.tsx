@@ -5,6 +5,10 @@ import avater from "../assets/avater/sitting.svg";
 import ScrollBar from '../components/ScrollBar';
 import ThankYou from "../components/ThankYou";
 
+import codePic from "../assets/home_blocks/code.svg"
+import sun from "../assets/home_blocks/sun.png"
+import HomePicBlock from "../components/shared/HomePicBlock";
+
 
 const Home = () => {
 
@@ -194,8 +198,34 @@ const Home = () => {
             })
     }, [])
 
+    // Sun 
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: early_dis.current as any,
+                start: "top 55%",
+                end: "bottom 55%",
+                scrub: 0.5,
+            },
+        });
+        tl.add("intro").to(".home__early_sun", {
+            opacity: 1,
+        })
+            .add("intro").to(".home__early_sun", {
+                opacity: 1,
+                transform: "translate(5px, -1px)",   
+            })
+            .add("exist").to(".home__early_sun", {
+                opacity: 0,
+                transform: "translate(60px, -1px)",
+            })
+    }, [])
+        
+
+
 
     return (
+
         <div className="home">
             <ScrollBar />
             <div className="home__container" >
@@ -231,6 +261,7 @@ const Home = () => {
                             Also have couple of production and some
                             for fun projects under my belt.
                         </p>
+                        <HomePicBlock pic={codePic} rotate={false}/>
                     </div>
 
 
@@ -264,6 +295,9 @@ const Home = () => {
                         <p>
                             Also I made my first “real” web project during this period.
                         </p>
+                        <div className="home__early_sun" >
+                            <HomePicBlock pic={sun} rotate={true}/>
+                        </div>
                     </div>
 
 
@@ -272,8 +306,9 @@ const Home = () => {
             </div>
 
 
-
         </div >
+    
+        
     )
 }
 

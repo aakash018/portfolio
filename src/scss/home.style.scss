@@ -89,6 +89,7 @@
 
 &__text_block {
     width: 90%;
+    position: relative;
 }
 
 &__course {
@@ -105,14 +106,21 @@
 &__early{
     opacity: 0;
     transform: rotateX(180deg);   
-}
 
+
+    &_sun{
+        transform: translate(-50px,50px);
+        opacity: 0;
+    }
+}
 
 p{   
     
     font-size: 1.8rem;
     line-height: 23px;
 }
+
+
 }
 
 @keyframes title_init {
@@ -137,3 +145,4 @@ p{
         opacity: 1;
     }
 }
+
