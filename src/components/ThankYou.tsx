@@ -36,7 +36,7 @@ const ThankYou: React.FC = () => {
         <>
             <div className="home__text_block home__thanks" ref={thanks} >
                 <div className="title_text title_small" id="home__thankYou">
-                    Thank you for checking my <span className="highlight">website</span>
+                    Thank you for checking <br /> my  <span className="highlight">website</span>
                 </div>
                 <p style={{ marginTop: "40px" }}><>Check Works and About Me section for more</></p>
                 

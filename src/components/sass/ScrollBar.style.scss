@@ -1,4 +1,4 @@
-$animation-bar-time: 1s;
+$animation-bar-time: 0s;
 
 
 
@@ -66,7 +66,7 @@ $animation-bar-time: 1s;
            border-radius: 50%;
 
            opacity: 1;
-           animation: bar_circle_wave 2s ease-out 2s normal forwards;
+           animation: bar_circle_wave 2s ease-out 1s normal forwards;
        }
     
    }

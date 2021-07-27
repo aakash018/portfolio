@@ -1,4 +1,5 @@
 import React, { useRef } from "react"
+import { Link } from "react-router-dom"
 import { Hamburger } from "./Hamburger"
 
 const Header: React.FC = () => {
@@ -15,7 +16,7 @@ const Header: React.FC = () => {
             </div>
             <nav ref={nav} >
                 <ul>
-                    <li>work</li>
+                    <li> <Link to="/work" >work</Link></li>
                     <li>about</li>
                     <li>contact</li>
                 </ul>
