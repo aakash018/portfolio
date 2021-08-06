@@ -14,11 +14,14 @@ const Header: React.FC = () => {
             <div className="header_ham">
                 <Hamburger onClick={handleMenuClick} />
             </div>
+            {/* <div className="header_logo" >
+                aakash
+            </div> */}
             <nav ref={nav} >
                 <ul>
+                    <li> <Link to="/" >aakash</Link></li>
                     <li> <Link to="/work" >work</Link></li>
                     <li>about</li>
-                    <li>contact</li>
                 </ul>
             </nav>
         </header>

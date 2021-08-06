@@ -1,0 +1,31 @@
+.projectInfo{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $background-color;
+    // background-color: antiquewhite;
+    z-index: 10;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1s ease-in-out;
+
+    
+    &__container{
+        height: 100%;
+        width: 100%;
+    }
+    
+    &__title{
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    &__desc{
+        font-size: 2.2rem;
+        padding: 0 15px;
+    }
+}
+
+.prj_active{
+    clip-path: circle(100%);
+}

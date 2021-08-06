@@ -11,12 +11,14 @@
 html {
   font-size: 60.5%;
   overflow-x: hidden;
+  position: relative;
+  height: 100%;
 }
 
 body{
   background-color: $background-color;
   color: white;
-  height: 100vh;
+  height: 100%;;
 }
 
 button {

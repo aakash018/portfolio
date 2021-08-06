@@ -10,7 +10,7 @@ import sun from "../assets/home_blocks/sun.png"
 import HomePicBlock from "../components/shared/HomePicBlock";
 
 
-const Home = () => {
+const Home:React.FC = () => {
 
     const introText = useRef<HTMLDivElement>(null)
     const introText_subtitle = useRef<HTMLDivElement>(null)

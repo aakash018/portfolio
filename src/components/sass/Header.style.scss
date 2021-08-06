@@ -1,6 +1,6 @@
 header {
     color: $theme-color;
-    height: 55px;
+    height: $header-height;
 
     // @include flex(flex-end);
 
@@ -18,7 +18,7 @@ header {
         background: $theme-color;
         position: relative;
 
-        z-index: 50;
+        z-index: 100;
         
 
         clip-path: circle(10% at 120% -20%);

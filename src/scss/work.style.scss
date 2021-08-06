@@ -1,0 +1,26 @@
+.work {
+
+    width: 100vw;
+    @include flex;
+    
+    &__container {
+        width: 80%;
+        margin-top: calc(#{$header-height} + 30px);
+        position: relative;
+        z-index: 1;
+    }
+
+    &__timeline {
+        width: 80%; 
+        &_bar{
+        // min-height: 400px;
+        width: 2px;
+        background:linear-gradient(to top,  $theme-color, $background-color);
+        position: absolute;
+        }
+
+        &_projects{
+           padding: 100px 0 0 40px;
+        }
+    }
+}

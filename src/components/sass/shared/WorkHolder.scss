@@ -1,0 +1,18 @@
+.workHolder{
+    &__container{
+        padding: 30px;
+    }
+
+    &__prj_info{
+        width: 200px;
+        // background-color: antiquewhite;
+        &_title{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        &_desc{
+            font-size: 1.4rem;
+        }
+    }
+}

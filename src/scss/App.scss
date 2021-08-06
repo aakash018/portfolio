@@ -4,15 +4,22 @@
 
 
 @import "../components/sass/Header.style.scss";
-@import "../scss/home.style.scss";
+@import "./home.style.scss";
+@import "./work.style.scss";
 @import "../components/sass/ScrollBar.style.scss";
 @import "../components/sass/Hamburger.style.scss";
 @import "../components/sass/Heading.style.scss";
 @import "../components/sass/ThankYou.style.scss";
 @import "../components/sass/shared/HomePicBlock.style.scss";
+@import "../components/sass/shared/WorkHolder.scss";
+@import "../components/sass/shared/ProjecInfo.scss";
 
 .highlight {
     color: $theme-color;
+}
+
+.highlight_hk {
+    color: #993762;
 }
 
 .title_text {
