@@ -1,11 +1,24 @@
 .workHolder{
     &__container{
+        width: 100vw;
         padding: 30px;
+        @include flex(space-between);
+
     }
 
-    &__prj_info{
-        width: 200px;
+    &__prj{
+    &_logo{
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    }
+    &_info{
+     width: 60%;
         // background-color: antiquewhite;
+
+
         &_title{
             font-size: 3rem;
             font-weight: bold;
@@ -15,4 +28,5 @@
             font-size: 1.4rem;
         }
     }
+}
 }

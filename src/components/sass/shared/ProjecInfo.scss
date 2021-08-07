@@ -1,3 +1,5 @@
+$hk: #993762;
+
 .projectInfo{
     width: 100vw;
     height: 100vh;
@@ -5,24 +7,44 @@
     background-color: $background-color;
     // background-color: antiquewhite;
     z-index: 10;
-    clip-path: circle(0% at 50% 50%);
+    clip-path: circle(0% at 120% 80%);
     transition: clip-path 1s ease-in-out;
 
+   &__info{
+       @media (min-width: $mobile-view){
+            width: 60%;
+            float: right;
+       }
+   } 
     
     &__container{
         height: 100%;
         width: 100%;
+        background-position-x: 50% !important;
+        background-position-y: 300px !important;
+       @media (min-width: $mobile-view){
+        background-position-x: 0% !important;
+        background-position-y: 0px !important;
+       }
     }
     
+    &__hide {
+        font-size: 3.5rem;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
     &__title{
         font-size: 2.5rem;
         text-align: center;
-        padding: 20px 0;
+        padding: 60px 0 20px 0;
     }
 
     &__desc{
-        font-size: 2.2rem;
-        padding: 0 15px;
+        font-size: 1.9rem;
+        padding: 0 25px;
+        
     }
 }
 

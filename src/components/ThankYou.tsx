@@ -40,7 +40,7 @@ const ThankYou: React.FC = () => {
                 </div>
                 <p style={{ marginTop: "40px" }}><>Check Works and About Me section for more</></p>
                 
-                <p className="home__thanks_contact" >
+                <div className="home__thanks_contact" >
                     <a>
                     aakashkhanal015@<span className="highlight">gmail.com</span>
                     </a>
@@ -52,7 +52,7 @@ const ThankYou: React.FC = () => {
                         <FaInstagram />
                         </a>
                     </section>
-                </p>
+                </div>
                 <div className="home__thanks_madeWith" >
                     <h2>/*  </h2>
                         <h2>Made with</h2>
@@ -74,4 +74,4 @@ const ThankYou: React.FC = () => {
     )
 }
 
-export default ThankYou
+export default ThankYou;

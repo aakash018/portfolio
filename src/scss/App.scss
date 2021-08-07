@@ -19,7 +19,11 @@
 }
 
 .highlight_hk {
-    color: #993762;
+    color: $hk_theme;
+}
+
+.highlight_emo {
+    color: $emo_theme;
 }
 
 .title_text {

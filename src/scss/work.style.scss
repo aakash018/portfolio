@@ -1,8 +1,14 @@
 .work {
 
     width: 100vw;
-    @include flex;
+    @include flex(space-between);
     
+    &__name_title{
+        font-size: 4rem;
+        font-weight: bolder;
+        margin-left: 40px;
+    }
+
     &__container {
         width: 80%;
         margin-top: calc(#{$header-height} + 30px);
@@ -13,14 +19,16 @@
     &__timeline {
         width: 80%; 
         &_bar{
-        // min-height: 400px;
+        min-height: 400px;
         width: 2px;
         background:linear-gradient(to top,  $theme-color, $background-color);
         position: absolute;
+        left: 20px;
+        display: none;
         }
 
-        &_projects{
-           padding: 100px 0 0 40px;
-        }
+        // &_projects{
+          
+        // }
     }
 }
