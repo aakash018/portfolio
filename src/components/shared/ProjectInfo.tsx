@@ -20,10 +20,8 @@ const ProjectInfo: React.FC<Props> = ({
   bgSS,
 }) => {
   const backgroundCSS: CSSProperties = {
-    background: ` linear-gradient(to bottom,rgb(10, 12, 19),rgba(10, 12, 19, 0.8)50%),url('/src/assets/PrjBG/${bgSS}')`,
-    backgroundRepeat: "no-repeat",
-    // backgroundPositionX: "50%",
-    // backgroundPositionY: "300px",
+    backgroundSize: "cover",
+    background: ` linear-gradient(to bottom,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)50%), linear-gradient(270deg,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)60%) ,url('/src/assets/PrjBG/${bgSS}')`,
   };
 
   const gitLogoStyle: CSSProperties = {
@@ -37,7 +35,8 @@ const ProjectInfo: React.FC<Props> = ({
       <div className="projectInfo__hide" onClick={() => setShowPrj(false)}>
         <IoMdClose />
       </div>
-      <div className="projectInfo__container" style={backgroundCSS}>
+      <div className="projectInfo__container" >
+        <div className="projectInfo__background" style={backgroundCSS}/>
         <div className="projectInfo__info">
           <div className="projectInfo__title">{title}</div>
           <div className="projectInfo__desc">
