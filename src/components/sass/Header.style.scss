@@ -1,10 +1,11 @@
 header {
     color: $theme-color;
     height: $header-height;
-
+    display: block;
     // @include flex(flex-end);
 
     position: fixed;
+    z-index: 100;
 
     @media (min-width: $mobile-view) {
         @include flex(flex-end);
@@ -16,9 +17,8 @@ header {
         height: 100vh;
         
         background: $theme-color;
-        position: relative;
+        // position: fixed;
 
-        z-index: 100;
         
 
         clip-path: circle(10% at 120% -20%);

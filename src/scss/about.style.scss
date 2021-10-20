@@ -1,0 +1,101 @@
+$title-after-margin: 20px;
+$block-after-margin: 50px;
+
+.about {
+    width: 100vw;
+    @include flex;
+    font-weight: bold;
+    &__container {
+        width: 80%;
+        margin-top: calc(#{$header-height} + 30px);
+        position: relative;
+        z-index: 1;
+        padding-left: 70px;
+        padding-bottom: 100px;
+        opacity: 0;
+        transform: translateX(-20px);
+
+        animation: aboutIntro 2s ease-in-out 0s forwards;
+
+        @media (max-width: $mobile-view){
+            width: 100%;
+            padding-left: 20px;
+
+        }
+
+    }
+    
+    &__title {
+        color: white;
+        font-size: 4rem;
+        font-weight: bolder;
+
+        width: 250px;
+
+        @include flex(space-between, flex-end);
+
+        button {
+            margin-bottom: 6px;
+        }
+
+    }
+
+    &__bio {
+        font-size: 1.9rem;
+        margin-top: 15px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    &__skill_list {
+        @include flex(space-between, start);
+        flex-wrap: wrap;
+        margin-top: $title-after-margin;
+
+        width: 80%;
+    }
+
+    &__skill_block {
+        
+        .title {
+            font-size: 1.8rem;
+            font-weight: bolder;
+        }
+
+        ul {
+            margin-top: 10px;
+            margin-left: 30px;
+            line-height: 25px;
+
+            list-style: none;
+
+            font-weight: bolder;
+        }
+    }
+
+    &__edu{
+        margin-top: $block-after-margin;
+    }
+
+    &__hobbies {
+        margin-top: $block-after-margin;
+    }
+}
+
+.about_subs{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-top: 25px;
+}
+
+.about_bio {
+    margin-top: $title-after-margin;
+    font-size: 1.8rem;
+}
+
+@keyframes aboutIntro {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

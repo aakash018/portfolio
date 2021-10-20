@@ -1,0 +1,16 @@
+.mainButton {
+    padding: 0.3rem 2rem;
+    border-radius: 1000px;
+
+    background-color: $theme-color;
+
+    font-weight: bold;
+
+    @include flex;
+    gap: 10px;
+
+    &:hover {
+        background-color: darken($color: $theme-color , $amount: 10);
+        cursor: pointer;
+    }
+}

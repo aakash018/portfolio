@@ -6,6 +6,7 @@
 @import "../components/sass/Header.style.scss";
 @import "./home.style.scss";
 @import "./work.style.scss";
+@import "../scss/about.style.scss";
 @import "../components/sass/ScrollBar.style.scss";
 @import "../components/sass/Hamburger.style.scss";
 @import "../components/sass/Heading.style.scss";
@@ -13,6 +14,7 @@
 @import "../components/sass/shared/HomePicBlock.style.scss";
 @import "../components/sass/shared/WorkHolder.scss";
 @import "../components/sass/shared/ProjecInfo.scss";
+@import "../components/sass/shared/MainButton.style.scss";
 
 .highlight {
     color: $theme-color;

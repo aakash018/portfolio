@@ -85,7 +85,7 @@ const Work: React.FC = () => {
             </p>
             <p>
               Visite the page here: <br />
-              emochat.netlify.com
+              <a href="https://emo-chat.vercel.app/" target="_blank"> <span className="highlight" >https://emo-chat.vercel.app</span></a> 
             </p>
           </>
         }
@@ -122,7 +122,8 @@ const Work: React.FC = () => {
               language of choice.
             </p>
             <p>Visite the page here: <br />
-               livingthedream.heroku.app</p>
+            <a href="https://livingthedreams.herokuapp.com/" target="_blank"> <span className="highlight" >https://livingthedreams.herokuapp.com/</span></a> 
+</p>
           </>
         }
         showProject={showDreamsInfo}
@@ -150,13 +151,13 @@ const Work: React.FC = () => {
                 <WorkHolder
                   logo={emLogo}
                   title="EmoChat"
-                  desc="A user  based web app to keep track of expenditure mainly for students living in droms."
+                  desc="A chat app with addition of emotion flags to replace emojies"
                   onClick={() => setEmoinfo(true)}
                 />
                 <WorkHolder
                   logo={drmLogo}
                   title="Dreams"
-                  desc="A user  based web app to keep track of expenditure mainly for students living in droms."
+                  desc="A dream journal to keep track of and share your dreams"
                   onClick={() => setDreamsinfo(true)}
                 />
               </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Header from './components/Header'
+import About from './pages/about'
 import Home from './pages/home'
 import Work from './pages/work'
 import './scss/App.scss'
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route path="/" component={Home} exact/>
           <Route path="/work" component={Work} exact/>
+          <Route path="/about" component={About} exact/>
         </Switch>
       </Router>
     </div>
