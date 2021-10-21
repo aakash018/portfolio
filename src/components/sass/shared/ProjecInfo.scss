@@ -26,14 +26,15 @@ $hk: #993762;
         visibility: hidden;
         position: absolute;
         background-repeat: no-repeat !important;
-        @media (min-width: $mobile-view){
-        background-size: cover;
-        visibility: visible;
-        height: 100vh;
-        width: 35%;
-        // background-position-x: 0% !important;
-        // background-position-y: 0px !important;
-       }
+            @media (min-width: $mobile-view){
+            background-size: cover;
+            visibility: visible;
+            height: 100vh;
+            width: 35%;
+            }
+        img {
+            opacity: 0.3;
+        }
     }
     
     &__hide {

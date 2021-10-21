@@ -1,4 +1,7 @@
 import React, { CSSProperties } from "react";
+import hamro from "../../assets/PrjBG/hamroKhata.png"
+import emo from "../../assets/PrjBG/emo1.png"
+import drm from "../../assets/PrjBG/drm2.png"
 import { FaGithub } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
@@ -19,11 +22,6 @@ const ProjectInfo: React.FC<Props> = ({
   theme,
   bgSS,
 }) => {
-  const backgroundCSS: CSSProperties = {
-    backgroundSize: "cover",
-    background: ` linear-gradient(to bottom,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)50%), linear-gradient(270deg,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)60%) ,url('/src/assets/PrjBG/${bgSS}')`,
-  };
-
   const gitLogoStyle: CSSProperties = {
     color: theme,
     fontSize: "4rem",
@@ -36,7 +34,17 @@ const ProjectInfo: React.FC<Props> = ({
         <IoMdClose />
       </div>
       <div className="projectInfo__container" >
-        <div className="projectInfo__background" style={backgroundCSS}/>
+        <div className="projectInfo__background" >
+          { bgSS === "hamroKhata.png" &&
+            <img src={hamro} alt="" />
+          }
+          { bgSS === "emo1.png" &&
+            <img src={emo} alt="" />
+          }
+          { bgSS === "drm2.png" &&
+            <img src={drm} alt="" />
+          }
+        </div>
         <div className="projectInfo__info">
           <div className="projectInfo__title">{title}</div>
           <div className="projectInfo__desc">
