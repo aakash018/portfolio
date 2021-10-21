@@ -4,17 +4,14 @@ import { FiDownload } from "react-icons/fi"
 
 
 const About:React.FC = () => {
-
-    const handleShowCV = () => {
-        window.location.href = "../assets/downloadables/CV.pdf"
-    }
-
     return (
         <div className="about">
             <div className="about__container">
                 <div className="about__title">
                     <span>About</span> 
-                    <MainButton type="button" onClick={handleShowCV}> resume <FiDownload /> </MainButton>
+                    <a href="/downloadables/CV.pdf" target="_blank" title="CV">
+                        <MainButton type="button">resume<FiDownload /> </MainButton>
+                    </a>
                 </div>
                 <div className="about__bio">
                     I am a full-stack developer, who mains on <span className="highlight">MERN</span> and 
