@@ -8,6 +8,7 @@ interface Props {
   showProject: boolean;
   theme: string;
   bgSS: string;
+  githubLink?: string;
   setShowPrj: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -17,11 +18,11 @@ const ProjectInfo: React.FC<Props> = ({
   showProject,
   setShowPrj,
   theme,
+  githubLink,
   bgSS,
 }) => {
   const backgroundCSS: CSSProperties = {
-    backgroundSize: "cover",
-    background: ` linear-gradient(to bottom,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)50%), linear-gradient(270deg,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)60%) ,url('/PrjBG/${bgSS}')`,
+    backgroundImage: ` linear-gradient(to bottom,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)50%), linear-gradient(270deg,rgb(10, 12, 19),rgba(10, 12, 19, 0.5)60%) ,url('/PrjBG/${bgSS}')`,
   };
 
   const gitLogoStyle: CSSProperties = {
@@ -42,7 +43,7 @@ const ProjectInfo: React.FC<Props> = ({
           <div className="projectInfo__desc">
             {desc}
             <div className="projectInfo__git" style={gitLogoStyle}>
-              <FaGithub />
+              <a href={githubLink} target="_blank"><FaGithub /></a> 
             </div>
           </div>
         </div>

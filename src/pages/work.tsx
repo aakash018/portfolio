@@ -101,6 +101,7 @@ const Work: React.FC = () => {
         setShowPrj={setEmoinfo}
         theme="#048C5C"
         bgSS="emo1.png"
+        githubLink="https://github.com/aakash018/emo-chat"
       />
 
       <ProjectInfo
@@ -138,6 +139,7 @@ const Work: React.FC = () => {
         setShowPrj={setDreamsinfo}
         theme="#047089"
         bgSS="drm2.png"
+        githubLink="https://github.com/aakash018/Dreams"
       />
 
       <div className="work">
