@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import ProjectInfo from "../components/shared/ProjectInfo";
 import WorkHolder from "../components/shared/WorkHolder";
 import hkLogo from "../assets/PrjLogos/hamroK.png";
 import drmLogo from "../assets/PrjLogos/drm.png";
 import emLogo from "../assets/PrjLogos/emoChat.svg";
+import { MobileNavState } from "../App";
 
 const Work: React.FC = () => {
   const [showHKInfo, setHKinfo] = useState(false);
   const [showEmoInfo, setEmoinfo] = useState(false);
   const [showDreamsInfo, setDreamsinfo] = useState(false);
+
+  const {setShowMobileNav} = useContext(MobileNavState)
+
+
+  useEffect(() => {
+    setShowMobileNav(false)
+}, [])
 
   return (
     <>

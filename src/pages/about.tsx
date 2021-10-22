@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import MainButton from '../components/shared/MainButton'
 import { FiDownload } from "react-icons/fi"
+import { MobileNavState } from '../App'
+
 
 
 const About:React.FC = () => {
+    
+    const {setShowMobileNav} = useContext(MobileNavState)
+    useEffect(() => {
+        setShowMobileNav(false)
+    }, [])
+
+
     return (
         <div className="about">
             <div className="about__container">

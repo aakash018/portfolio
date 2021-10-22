@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import avater from "../assets/avater/sitting.svg";
 import ScrollBar from '../components/ScrollBar';
 import ThankYou from "../components/ThankYou";
@@ -8,6 +8,7 @@ import ThankYou from "../components/ThankYou";
 import codePic from "../assets/home_blocks/code.svg"
 import sun from "../assets/home_blocks/sun.png"
 import HomePicBlock from "../components/shared/HomePicBlock";
+import { MobileNavState } from "../App";
 
 
 const Home:React.FC = () => {
@@ -20,9 +21,15 @@ const Home:React.FC = () => {
     const early = useRef<HTMLDivElement>(null)
     const early_dis = useRef<HTMLDivElement>(null)
 
+    const {setShowMobileNav} = useContext(MobileNavState)
+
     // * INIT
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
+    }, [])
+
+    useEffect(() => {
+        setShowMobileNav(false)
     }, [])
 
     // * Introduse main

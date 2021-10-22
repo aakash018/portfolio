@@ -1,12 +1,21 @@
-import React, { useRef } from "react"
+import React, { useContext, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
+import { MobileNavState } from "../App"
 import { Hamburger } from "./Hamburger"
 
 const Header: React.FC = () => {
-
+    const { showMobileNav, setShowMobileNav }  = useContext(MobileNavState)
     const nav = useRef<HTMLElement>(null)
+
+    useEffect(() => {
+        if(!showMobileNav) {
+            nav.current?.classList.remove("nav_active")
+        }
+    }, [showMobileNav])
+
     const handleMenuClick = () => {
         nav.current?.classList.toggle("nav_active")
+        setShowMobileNav(true)
     }
 
     return (
