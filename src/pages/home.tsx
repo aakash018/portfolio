@@ -247,7 +247,7 @@ const Home:React.FC = () => {
                         <div className="subtitle">
                             <div ref={introText_subtitle}>
                                 <span >A Creative <b className="highlight">Fullstack</b> </span>
-                                <span>developer & <b className="highlight">designer</b></span>
+                                <span>web developer</span>
                             </div>
                         </div>
                     </div>
