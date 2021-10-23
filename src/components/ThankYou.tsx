@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from 'react';
 import { FaGithub, FaInstagram } from "react-icons/fa"
+import { Link } from "react-router-dom";
 const ThankYou: React.FC = () => {
 
     const thanks = useRef<HTMLDivElement>(null)
@@ -38,7 +39,7 @@ const ThankYou: React.FC = () => {
                 <div className="title_text title_small" id="home__thankYou">
                     Thank you for checking <br /> my  <span className="highlight">website</span>
                 </div>
-                <p style={{ marginTop: "40px" }}><>Check Works and About Me section for more</></p>
+                <p style={{ marginTop: "40px" }}><>Check <Link to="/work" > <span className="highlight">Works</span></Link>  and <Link to="/about" > <span className="highlight">About Me</span></Link>   section for more</></p>
                 
                 <div className="home__thanks_contact" >
                     <a>

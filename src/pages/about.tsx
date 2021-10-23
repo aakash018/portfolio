@@ -78,11 +78,20 @@ const About:React.FC = () => {
                     
                 </div>
 
+
                 <div className="about__hobbies">
                 <div className="about_subs">Hobbies</div>
                 <div className="about_bio">
                 Beside coding, I mainly keep myself busy with video games, musics, books
                 <br /> and most important of all cooking. I am a really sucker for good food.
+                </div>
+
+
+                <div className="about__contact" >
+                    <div className="about_subs">Contact</div>
+                    <div className="about_bio" >
+                        Email - aakashkhanal015@gmail.com
+                    </div>
                 </div>
                 </div>
 

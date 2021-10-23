@@ -9,6 +9,7 @@ import codePic from "../assets/home_blocks/code.svg"
 import sun from "../assets/home_blocks/sun.png"
 import HomePicBlock from "../components/shared/HomePicBlock";
 import { MobileNavState } from "../App";
+import { Link } from "react-router-dom";
 
 
 const Home:React.FC = () => {
@@ -266,7 +267,9 @@ const Home:React.FC = () => {
                             or <span className="highlight" ><b>PERN</b></span> stack  but am always looking
                             forward learning any new technologies.
                             Also have couple of production and some
-                            for fun projects under my belt.
+                            for fun projects under my belt. <br />
+                            Selected projects of them are listed <Link to="/work" > <span className="highlight">here</span></Link>  <br />
+                            For more check my github <a href="https://github.com/aakash018" target="_blank"><span className="highlight">here</span></a>
                         </p>
                         <HomePicBlock pic={codePic} rotate={false}/>
                     </div>
