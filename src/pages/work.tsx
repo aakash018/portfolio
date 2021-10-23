@@ -48,7 +48,7 @@ const Work: React.FC = () => {
             <p>
               Visite the page here:
               <br />
-              hamrokahta.netlify.com
+              N/A
             </p>
           </>
         }
