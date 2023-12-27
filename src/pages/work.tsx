@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import ProjectInfo from "../components/shared/ProjectInfo";
 import WorkHolder from "../components/shared/WorkHolder";
-import hkLogo from "../assets/PrjLogos/hamroK.png";
+import hkLogo from "../assets/PrjLogos/dikstra.png";
 import drmLogo from "../assets/PrjLogos/drm.png";
-import emLogo from "../assets/PrjLogos/emoChat.svg";
+import emLogo from "../assets/PrjLogos/evolution.png";
 import { MobileNavState } from "../App";
 
 const Work: React.FC = () => {
@@ -12,96 +12,106 @@ const Work: React.FC = () => {
   const [showEmoInfo, setEmoinfo] = useState(false);
   const [showDreamsInfo, setDreamsinfo] = useState(false);
 
-  const {setShowMobileNav} = useContext(MobileNavState)
-
+  const { setShowMobileNav } = useContext(MobileNavState);
 
   useEffect(() => {
-    setShowMobileNav(false)
-}, [])
+    setShowMobileNav(false);
+  }, []);
 
   return (
     <>
       <ProjectInfo
         title={
           <h1>
-            Hamro<span className="highlight_hk">Khata</span>
+            Dijkstra<span className="highlight_hk">Visualization</span>
           </h1>
         }
         desc={
           <>
             <p>
               {" "}
-              This is a web app, whose main purpose is to keep tract and devide
-              expenditure, for students living together. The motivation of the
-              project came when me and my my room mates had a really big problem
-              keeping tract of the expences{" "}
+              Dijkstra's algorithm, devised by Dutch computer scientist Edsger
+              W. Dijkstra, is a fundamental method for finding the shortest path
+              in a weighted graph from a single source node to all other nodes.
+              It operates by iteratively selecting the node with the smallest
+              known distance from the source and updating the distances to
+              neighboring nodes, gradually building the shortest path
+              tree.Dijkstra's algorithm guarantees the shortest path when all
+              edge weights are non-negative.
             </p>
 
             <p>
               {" "}
-              Basically after you make your account, you cna add information
-              about expances and the app automatically divides it to every
-              roommates and keep tracks everyons’s lone with eachother.{" "}
+              This web app allows users to input start and end points on a grid
+              while designating obstacles or walls. The algorithm then
+              calculates the shortest path, avoiding the obstacles, and displays
+              the route dynamically. This interactive platform serves as a
+              hands-on tool for understanding pathfinding algorithms like
+              Dijkstra's in a visually engaging manner.
             </p>
 
-            <p>I did full frontend to backend development fotr this project.</p>
             <p>
-              Visite the page here:
+              Visit the page here:
               <br />
-              N/A
+              <a
+                href="https://dijkastra-visualization.netlify.app/"
+                target="_blank"
+              >
+                <span className="highlight">
+                  https://dijkastra-visualization.netlify.app/
+                </span>
+              </a>
             </p>
           </>
         }
         showProject={showHKInfo}
         setShowPrj={setHKinfo}
-        theme="#993762"
-        bgSS="hamroKhata.png"
+        theme="#4e9aba"
+        bgSS="dijkstra.png"
+        githubLink="https://github.com/aakash018/dijkstras-visualization"
       />
 
       <ProjectInfo
         title={
           <h1>
-            Emo<span className="highlight_emo">Chat</span>
+            Evo<span className="highlight_emo">lution</span>
           </h1>
         }
         desc={
           <>
             <p>
-              In todays texting world ue of emojies can gotton pretty normal and
-              even essential. Asking the “young generation we can get an idea on
-              which emoji is hippy new thinge to use and which are for old
-              peple, but if you ask me every the concept of emojie as a whole is
-              getting out dated.{" "}
+              Curated from the dawn of human ingenuity to the present
+              technological marvels, this comprehensive website encapsulates the
+              chronicles of innovation. Journey through pivotal human
+              inventions, from the discovery of fire to the advent of artificial
+              intelligence, exploring the evolution of groundbreaking creations
+              that shaped civilization and continue to define our world.
             </p>
 
             <p>
-              {" "}
-              Main Problem the decentrilization of the system where same emojie
-              can mean 10 different thing. I don’t have to be a sherlock to
-              figure your text out.
+              Framer Motion is used to unleash the power of mesmerizing
+              animations, infusing life into the website's narrative by
+              seamlessly weaving captivating transitions, visually stunning
+              effects, and dynamic motions that captivate and engage every
+              visitor
             </p>
 
-            <p>
-              This is where EmoChat comes in. It lets you use these pre-made
-              things called emotion flags to deliver your thoughts and feelings
-              in much centerlized way.{" "}
-            </p>
-            <p>
-              The full project was developed by me using React and Scss for
-              frontend and Node and Express on backend, Typescript beinf
-              language of choice.
-            </p>
             <p>
               Visite the page here: <br />
-              <a href="https://emo-chat.vercel.app/" target="_blank"> <span className="highlight" >https://emo-chat.vercel.app</span></a> 
+              <a href="https://humanity-evolution.netlify.app/" target="_blank">
+                {" "}
+                <span className="highlight">
+                  https://humanity-evolution.netlify.app/
+                </span>
+              </a>
             </p>
           </>
         }
         showProject={showEmoInfo}
         setShowPrj={setEmoinfo}
-        theme="#048C5C"
-        bgSS="emo1.png"
-        githubLink="https://github.com/aakash018/emo-chat"
+        theme="#f82933"
+        bgSS="evolution.png"
+        githubLink="https://github.com/aakash018/evolution"
       />
 
       <ProjectInfo
@@ -130,9 +140,15 @@ const Work: React.FC = () => {
               frontend and Node and Express on backend, Javascript being
               language of choice.
             </p>
-            <p>Visite the page here: <br />
-            <a href="https://livingthedreams.herokuapp.com/" target="_blank"> <span className="highlight" >https://livingthedreams.herokuapp.com/</span></a> 
-</p>
+            <p>
+              Visite the page here: <br />
+              <a href="https://livingthedreams.herokuapp.com/" target="_blank">
+                {" "}
+                <span className="highlight">
+                  https://livingthedreams.herokuapp.com/
+                </span>
+              </a>
+            </p>
           </>
         }
         showProject={showDreamsInfo}
@@ -153,15 +169,15 @@ const Work: React.FC = () => {
               <div className="work__timeline_projects_list">
                 <WorkHolder
                   logo={hkLogo}
-                  title="HamroKhata"
-                  desc="A user  based web app to keep track of expenditure mainly for students living in droms."
+                  title="Dijkstra Visualization"
+                  desc="A web app that visually demonstrates the shortest path algorithm by illustrating the process of finding the shortest path between nodes in a graph."
                   onClick={() => setHKinfo(true)}
                 />
 
                 <WorkHolder
                   logo={emLogo}
-                  title="EmoChat"
-                  desc="A chat app with addition of emotion flags to replace emojies"
+                  title="Evolution"
+                  desc="Embark on a captivating voyage through the evolution of human innovation from fire to modern AI on this enlightening website."
                   onClick={() => setEmoinfo(true)}
                 />
                 <WorkHolder
