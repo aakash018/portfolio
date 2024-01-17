@@ -11,15 +11,13 @@ header {
         @include flex(flex-end);
         width: 100vw;
     }
-    
+
     nav {
         width: 100vw;
         height: 100vh;
-        
+
         background: $theme-color;
         // position: fixed;
-
-        
 
         clip-path: circle(10% at 120% -20%);
         transition: clip-path 1s ease-in-out;
@@ -36,12 +34,12 @@ header {
         ul {
             @include flex(space-evenly);
             flex-direction: column;
-            
+
             font-weight: bold;
             font-size: 8rem;
-            
+
             height: 100%;
-            
+
             color: $background-color;
             li {
                 list-style: none;
@@ -55,12 +53,11 @@ header {
         }
     }
 
-    .nav_active{
-        clip-path: circle(100%);
-
+    .nav_active {
+        clip-path: circle(150% at 0% 0%);
     }
 
-    .header_ham{
+    .header_ham {
         position: absolute;
         right: 0;
         top: 20px;
@@ -70,5 +67,5 @@ header {
         @media (min-width: $mobile-view) {
             display: none;
         }
-    } 
+    }
 }

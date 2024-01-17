@@ -1,6 +1,6 @@
 $hk: #993762;
 
-.projectInfo{
+.projectInfo {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -10,33 +10,33 @@ $hk: #993762;
     clip-path: circle(0% at -0% 0%);
     transition: clip-path 1.5s ease-in-out;
 
-   &__info{
-       @media (min-width: $mobile-view){
+    &__info {
+        @media (min-width: $mobile-view) {
             width: 60%;
             float: right;
-       }
-   } 
-    
-    &__container{
+        }
+    }
+
+    &__container {
         height: 100%;
         width: 100%;
     }
 
-    &__background{
+    &__background {
         visibility: hidden;
         position: absolute;
         background-repeat: no-repeat !important;
-            @media (min-width: $mobile-view){
+        @media (min-width: $mobile-view) {
             background-size: cover;
             visibility: visible;
             height: 100vh;
             width: 35%;
-            }
+        }
         img {
             opacity: 0.3;
         }
     }
-    
+
     &__hide {
         font-size: 3.5rem;
         position: absolute;
@@ -45,19 +45,18 @@ $hk: #993762;
         cursor: pointer;
     }
 
-    &__title{
+    &__title {
         font-size: 2.5rem;
         // text-align: left;
         padding: 60px 25px 20px 25px;
     }
 
-    &__desc{
+    &__desc {
         font-size: 1.9rem;
         padding: 0 25px;
-        
     }
 }
 
-.prj_active{
-    clip-path: circle(100%);
+.prj_active {
+    clip-path: circle(200% at 0 0);
 }

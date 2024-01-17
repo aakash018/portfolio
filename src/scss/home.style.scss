@@ -1,5 +1,5 @@
-.home{
-    @include flex(center,flex-start);
+.home {
+    @include flex(center, flex-start);
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -7,124 +7,109 @@
     // overflow: scroll;
     // position: fixed;
 
-  
-
-&__container{
-    width: 100vw;
-    // min-height: 70vh;    
-    height: 100vh;
-    // @include flex(space-between);
-    flex-direction: column;
-
-}
-
-&__sitting_avater {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-
-    @media (min-width: $mobile-view){
-        left: 50px;
-        top: 50%;
-        transform: translateY(-50%);
-        
+    &__container {
+        width: 100vw;
+        // min-height: 70vh;
+        height: 100vh;
+        // @include flex(space-between);
+        flex-direction: column;
     }
 
-    img{
-    width: 200px;
-    object-fit: cover;
-    @media (min-width: $mobile-view){
-        width: 300px;
-    }
+    &__sitting_avater {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
 
-    
-    }
-}
-&__title {
-    opacity: 0;
-    color: $theme-color;
-    transform: translateY(-20px);
+        @media (min-width: $mobile-view) {
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    animation: title_init 1s ease-in 3s normal forwards;
-}
-
-&__text_info{
-
-    align-self: flex-start;
-    margin-left: 60px;
-    height: 100vh;
-    position: relative;
-    z-index: -1;
-    position: absolute;
-    top: 350px;
-
-    @include flex(flex-start, flex-start);
-    gap: 200px;
-    flex-direction: column;
-
-    @media (min-width: $mobile-view){
-        width: 50%;
-        right: 60px;
-        top: 50%;
-    }
-
-    
-    .subtitle {
-        font-size: 3rem;
-        font-weight: bold;
-
-        opacity: 0;
-        transform: translateX(-20px);
-        animation: subtitle_init 1s ease-in 3.5s normal forwards;
-
-        // background-color: khaki;
-
-
-        span {  
-            display: block;
+        img {
+            width: 200px;
+            object-fit: cover;
+            @media (min-width: $mobile-view) {
+                width: 300px;
+            }
         }
     }
-}
-
-&__text_block {
-    width: 90%;
-    position: relative;
-}
-
-&__course {
-    opacity: 0;
-    transform: rotateX(180deg); 
-}
-
-&__work{
-    opacity: 0;
-    // transform: rotateX(180deg); 
-
-}
-
-&__early{
-    opacity: 0;
-    transform: rotateX(180deg);   
-
-
-    &_sun{
-        transform: translate(-50px,50px);
+    &__title {
         opacity: 0;
+        color: $theme-color;
+        transform: translateY(-20px);
+
+        animation: title_init 1s ease-in 0.8s normal forwards;
     }
-}
 
-p{   
-    
-    font-size: 1.8rem;
-    line-height: 23px;
-}
+    &__text_info {
+        align-self: flex-start;
+        margin-left: 60px;
+        height: 100vh;
+        position: relative;
+        z-index: -1;
+        position: absolute;
+        top: 350px;
 
+        @include flex(flex-start, flex-start);
+        gap: 200px;
+        flex-direction: column;
 
+        @media (min-width: $mobile-view) {
+            width: 50%;
+            right: 60px;
+            top: 50%;
+        }
+
+        .subtitle {
+            font-size: 3rem;
+            font-weight: bold;
+
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: subtitle_init 1s ease-in 1.7s normal forwards;
+
+            // background-color: khaki;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__text_block {
+        width: 90%;
+        position: relative;
+    }
+
+    &__course {
+        opacity: 0;
+        transform: rotateX(180deg);
+    }
+
+    &__work {
+        opacity: 0;
+        // transform: rotateX(180deg);
+    }
+
+    &__early {
+        opacity: 0;
+        transform: rotateX(180deg);
+
+        &_sun {
+            transform: translate(-50px, 50px);
+            opacity: 0;
+        }
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 23px;
+    }
 }
 
 @keyframes title_init {
-
     50% {
         opacity: 0.5;
         color: $theme-color;
@@ -138,11 +123,8 @@ p{
 }
 
 @keyframes subtitle_init {
-
-
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
-

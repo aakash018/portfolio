@@ -5,6 +5,7 @@ import WorkHolder from "../components/shared/WorkHolder";
 import hkLogo from "../assets/PrjLogos/dikstra.png";
 import drmLogo from "../assets/PrjLogos/drm.png";
 import emLogo from "../assets/PrjLogos/evolution.png";
+import lumiLogo from "../assets/PrjLogos/luminex.png";
 import { MobileNavState } from "../App";
 
 const Work: React.FC = () => {
@@ -117,35 +118,34 @@ const Work: React.FC = () => {
       <ProjectInfo
         title={
           <h1>
-            <span className="highlight_drm">Dreams</span>
+            <span className="highlight_drm">
+              lumi<span style={{ color: "#F71735" }}>nex</span>
+            </span>
           </h1>
         }
         desc={
           <>
             <p>
-              The subject of dreams has always facinated me. The only bad part
-              about them, we often tend to forget it once we wake up.
+              Embark on a captivating literary adventure with Luminex, your
+              ultimate ebook companion designed for the modern reader. Immerse
+              yourself in a world of riveting stories seamlessly synchronized
+              across all your devices, ensuring you can effortlessly pick up
+              where you left off. Luminex offers an intuitive and personalized
+              reading experience, tailoring your literary journey to your unique
+              preferences, all while placing a strong emphasis on the power of
+              synchronization.
             </p>
 
             <p>
-              Dreams is a web app that let’s you keep record of these precious
-              memories. Keeping track of your dreams lets you know your self
-              better. Not only you can keep tour journal, but you can also share
-              this with worls, and read other stories and have time of your
-              life.
-            </p>
-
-            <p>
-              The full project was developed by me using React and CSS for
-              frontend and Node and Express on backend, Javascript being
-              language of choice.
+              Made with React and Tailwind for frontend and Node, Express and
+              Postgres for backend.
             </p>
             <p>
-              Visite the page here: <br />
-              <a href="https://livingthedreams.herokuapp.com/" target="_blank">
+              Visit the page here: <br />
+              <a href="https://luminex-read.netlify.app/" target="_blank">
                 {" "}
                 <span className="highlight">
-                  https://livingthedreams.herokuapp.com/
+                  https://luminex-read.netlify.app/
                 </span>
               </a>
             </p>
@@ -153,9 +153,9 @@ const Work: React.FC = () => {
         }
         showProject={showDreamsInfo}
         setShowPrj={setDreamsinfo}
-        theme="#047089"
-        bgSS="drm2.png"
-        githubLink="https://github.com/aakash018/Dreams"
+        theme="#F71735"
+        bgSS="luminex.png"
+        githubLink="https://github.com/aakash018/luminex"
       />
 
       <div className="work">
@@ -181,9 +181,9 @@ const Work: React.FC = () => {
                   onClick={() => setEmoinfo(true)}
                 />
                 <WorkHolder
-                  logo={drmLogo}
-                  title="Dreams"
-                  desc="A dream journal to keep track of and share your dreams"
+                  logo={lumiLogo}
+                  title="luminex"
+                  desc="luminex: Seamlessly sync and elevate your reading experience across all devices with innovative features and personalized recommendations."
                   onClick={() => setDreamsinfo(true)}
                 />
               </div>
