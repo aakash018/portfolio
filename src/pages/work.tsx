@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProjectInfo from "../components/shared/ProjectInfo";
 import WorkHolder from "../components/shared/WorkHolder";
 import hkLogo from "../assets/PrjLogos/dikstra.png";
-import drmLogo from "../assets/PrjLogos/drm.png";
+
 import emLogo from "../assets/PrjLogos/evolution.png";
 import lumiLogo from "../assets/PrjLogos/luminex.png";
 import { MobileNavState } from "../App";
